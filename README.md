@@ -15,3 +15,9 @@ b, ab, aab, aaab, aaaab, aaaaab
 ba, bb, aba, abb, baa, bab, bba, bbb, aaba, aabb, abaa, abab, abba, abbb, baaa, baab, baba, babb, bbaa, bbab, bbba, bbbb, aaaba, aaabb, aabaa, aabab, aabba, aabbb, abaaa, abaab, ababa, ababb, abbaa, abbab, abbba, abbbb, baaaa, baaab, baaba, baabb, babaa, babab, babba, babbb, bbaaa, bbaab, bbaba, bbabb, bbbaa, bbbab, bbbba, bbbbb, aaaaba, aaaabb, aaabaa, aaabab, aaabba, aaabbb, aabaaa, aabaab, aababa, aababb, aabbaa, aabbab, aabbba, aabbbb, abaaaa, abaaab, abaaba, abaabb, ababaa, ababab, ababba, ababbb, abbaaa, abbaab, abbaba, abbabb, abbbaa, abbbab, abbbba, abbbbb, baaaaa, baaaab, baaaba, baaabb, baabaa
 
 ```
+
+## Explanation
+* The first arg is a regex
+* The second arg is the alphabet
+* The third arg is the number of strings to test against from all possible
+  strings (starting from the shortest ones)
