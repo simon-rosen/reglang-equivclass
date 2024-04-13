@@ -19,11 +19,11 @@ eqCondition regexToTest x y z =
 eqClass :: String -> String -> [String] -> [String]
 eqClass regex x stringsToTest = [y | y <- stringsToTest, all (== True) [eqCondition regex x y z | z <- stringsToTest]]
 
--- | partitions an alphabet (a subset of some size given) into
+-- | partitions an the strings over an alphabet (or really a subset of some size given) into
 -- groups that belong to the same equivalence class with respect
 -- to some regular language given as a regex.
-partition :: [String] -> String -> Int -> [[String]]
-partition alphabet regex numStrings = go "" strings
+partition :: String -> [String] -> Int -> [[String]]
+partition regex alphabet numStrings = go "" strings
   where
     strings = take numStrings $ stringsOver alphabet
     fullRegex = "^" <> regex <> "$"
@@ -31,5 +31,5 @@ partition alphabet regex numStrings = go "" strings
       | null stringsLeft = []
       | otherwise = let eqs = eqClass fullRegex first strings
                         stringsLeft' = stringsLeft \\ eqs
-                        first' = head stringsLeft
+                        first' = head stringsLeft'
                     in  eqs : go first' stringsLeft'
